@@ -12,7 +12,7 @@ class UserRequest(BaseModel):
     # Модель запроса пользователя
     query: str
 
-@app.pos("/query")
+@app.post("/query")
 def process_query(query: UserRequest):
     # Обработка запроса пользователя
     start_time = time()
